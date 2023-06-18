@@ -11,7 +11,8 @@ function mintNFT(name, tshirtColor, gender) {
     tshirtColor: tshirtColor,
     gender: gender
   };
-  return nft;
+  nfts.push(nft);
+  console.log("minted : "+name);
 }
 
 // Creating a "loop" that will go through the "array" of NFTs
@@ -31,13 +32,10 @@ function getTotalSupply() {
   }
 
 // Mint some NFTs
-const nft1 = mintNFT("Abhishek", "White", "Male");
-const nft2 = mintNFT("Nami", "Orange", "Female");
-const nft3 = mintNFT("Zoro", "Green", "Male");
-const nft4 = mintNFT("Robin", "Blue", "Female");
-
-// Store the minted NFTs in the array
-nfts.push(nft1, nft2,nft3,nft4);
+mintNFT("Abhishek", "White", "Male");
+mintNFT("Nami", "Orange", "Female");
+mintNFT("Zoro", "Green", "Male");
+mintNFT("Robin", "Blue", "Female");
 
 // List all NFTs
 listNFTs();
